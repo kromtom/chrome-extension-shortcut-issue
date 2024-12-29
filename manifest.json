@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "chrome-extension-shortcut-issue",
+  "description": "chrome-extension-shortcut-issu",
+  "version": "1.0.0",
+  "author": "tkromrych@gmail.com",
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+  "commands": {
+    "newTab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "MacCtrl+Shift+P"
+      },
+      "description": "newTab"
+    }
+  },
+  "permissions": []
+}
